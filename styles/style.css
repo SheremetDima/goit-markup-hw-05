@@ -626,6 +626,30 @@ footer {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.portfolio-cover-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-cover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  padding: 63px 24px 0px 24px;
+  color: var(--second-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+  overflow: auto;
+}
+.portfolio-item:hover .portfolio-cover-text {
+  transform: translateY(0%);
+}
+
 .portfolio-wraper {
   padding: 20px 24px;
 }
@@ -643,6 +667,11 @@ footer {
   color: var(--content-text-colot);
 }
 
-/* #2196f3 */
-
-/* fill="#afb1b8" style="fill: var(--color1, #afb1b8)" */
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #30303080;
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
