@@ -272,6 +272,11 @@ body {
   border: none;
 }
 
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #188ce8;
+}
+
 /*------------- ADVANTAGE -------------*/
 
 .section-title {
@@ -641,6 +646,7 @@ footer {
   padding: 63px 24px 0px 24px;
   color: var(--second-text-color);
   background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms linear;
