@@ -80,7 +80,7 @@
       <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -147,7 +147,6 @@
             <li class="action-img item">
               <img src="./images/img1.jpg" alt="Посилвння на курс №1" width="370" />
               <h3 class="action-text">Десктопні додатки</h3>
-
             </li>
             <li class="action-img item">
               <img src="./images/img2.jpg" alt="Посилвння на курс №2" width="370" />
@@ -552,6 +551,15 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop"></div>
+    <div class="backdrop is-hiden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-close-icon" width="11" height="11">
+            <use href="./images/sprite_orig.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -679,5 +679,49 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #30303080;
-  transition: opacity 300ms linear, visibility 300ms linear;
+  transition: opacity 250ms linear, visibility 250ms linear;
+
+
+}
+
+.modal {
+  width: 528px;
+  height: 581px;
+  background-color: var(--main-backgraund-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaley(1);
+  transition: transform 300ms linear;
+}
+
+
+.backdrop.is-hiden .modal {
+  transform: translate(-50%, -50%) scaley(0);
+}
+
+.modal-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  
+}
+
+.is-hiden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
