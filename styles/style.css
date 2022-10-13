@@ -424,17 +424,20 @@ body {
   justify-content: center;
   width: 44px;
   height: 44px;
-  fill: #afb1b8;
+  color: #afb1b8;
   border-radius: 50%;
 
-  transition: fill 250ms linear, background-color 250ms linear;
+  transition: color 250ms linear, background-color 250ms linear;
   position: relative;
+}
+.team-icon {
+  fill: currentColor;
 }
 
 .team-soc-link:hover,
 .team-soc-link:focus {
   background-color: var(--accent-color);
-  fill: #ffffff;
+  color: #ffffff;
 }
 
 /* ------------ CLIENT ------------ */
@@ -450,21 +453,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #afb1b8;
+  color: #afb1b8;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  transition: fill 250ms linear, background-color 250ms linear;
+  transition: color 250ms linear, background-color 250ms linear;
   position: relative;
+}
+
+.client-icon-soc {
+  fill: currentColor;
 }
 
 .client-link:hover,
 .client-link:focus,
 .client-link:active {
   border-color: var(--accent-color);
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /*------------- FOOTER -------------*/
@@ -599,6 +606,9 @@ footer {
   cursor: pointer;
 
   padding: 6px 25px;
+
+  transition: color 250ms linear, background-color 250ms linear, box-shadow 250ms linear;
+  position: relative;
 }
 
 .filtre-btn:hover,
@@ -624,6 +634,8 @@ footer {
 .portfolio-item {
   width: 370px;
   border: 1px solid #eeeeee;
+
+  transition: box-shadow 250ms linear;
 }
 
 .portfolio-item:hover {
@@ -649,7 +661,8 @@ footer {
   width: 100%;
   height: 100%;
   transform: translateY(100%);
-  transition: transform 250ms linear;
+  
+  transition: transform 300ms linear;
   overflow: auto;
 }
 .portfolio-item:hover .portfolio-cover-text {
@@ -673,6 +686,7 @@ footer {
   color: var(--content-text-colot);
 }
 
+/* ------------------ MODAL ----------------- */
 .backdrop {
   position: fixed;
   top: 0;
@@ -680,8 +694,6 @@ footer {
   height: 100%;
   background-color: #30303080;
   transition: opacity 250ms linear, visibility 250ms linear;
-
-
 }
 
 .modal {
@@ -699,9 +711,11 @@ footer {
   transition: transform 300ms linear;
 }
 
-
-.backdrop.is-hiden .modal {
+.backdrop.is-hidden {
   transform: translate(-50%, -50%) scaley(0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .modal-btn {
@@ -717,11 +731,10 @@ footer {
   align-items: center;
   justify-content: center;
   padding: 0px;
-  
 }
 
-.is-hiden {
+/* .is-hiden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
+} */
